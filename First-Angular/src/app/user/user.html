@@ -1,6 +1,11 @@
 <div>
-    <button>
-        <img src="" alt="">
-        <span>NAME</span>
+    <!-- Zone.js works with Angular to manage asynchronous operations to change the state of the application -->
+    <!-- This button will trigger the onSelectUser method when clicked -->
+    <button (click)="onSelectUser()">
+        <img [src]="imagePath()" 
+        [alt]="selectedUser().name">
+        <!-- getter imagePath is used to dynamically set the image source -->
+        <!--Property binding key feature is used to bind element properties to dynamic data-->
+        <span>{{ selectedUser().name }}</span> <!-- String Interpolation for the user name -->
     </button>
 </div>
