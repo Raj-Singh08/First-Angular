@@ -12,5 +12,5 @@ export class NewTask {
 
   onCancelAdd(){
     this.cancelTask.emit(false);
-  } 
+  }   
 } 
