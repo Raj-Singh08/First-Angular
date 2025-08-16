@@ -1,16 +1,11 @@
 import { Component ,Input, input, Output, EventEmitter, signal , computed , output} from '@angular/core';
+import {type UserType } from './user.model'
 
 // type UserType = {
 //   id: string;
 //   avatar: string;
 //   name: string;
 // }
-
-interface UserType {
-  id: string;
-  avatar: string;
-  name: string;
-}   
 
 @Component({
   selector: 'app-user',
@@ -19,7 +14,7 @@ interface UserType {
   styleUrl: './user.css'
 })
 export class User {
-
+  @Input ({required:true}) selected!:boolean;
   @Input({required: true}) user!:UserType;
 
   // @Input({required: true}) id: string | undefined; 

@@ -1,7 +1,7 @@
 <div>
     <!-- Zone.js works with Angular to manage asynchronous operations to change the state of the application -->
     <!-- This button will trigger the onSelectUser method when clicked -->
-    <button (click)="onSelectUser()">
+    <button [class.active]="selected" (click)="onSelectUser()">
         <img [src]="imagePath" 
         [alt]="user.name">
         <!-- getter imagePath is used to dynamically set the image source -->
